@@ -1,0 +1,113 @@
+{
+    "env": {
+      "browser": true,
+      "es2020": true,
+      "jest": true
+    },
+    "extends": [
+      "airbnb-base",
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 11,
+      "tsconfigRootDir": "./tsconfig.json"
+    },
+    "plugins": [
+      "import",
+      "jsx-a11y",
+      "react",
+      "react-hooks"
+    ],
+    "globals": {
+      "BFF_URL": true
+    },
+    "rules": {
+      "indent":[2, "tab"],
+      "no-tabs": 0,
+      "no-mixed-spaces-and-tabs": 0,
+      "jsx-a11y/anchor-is-valid": 0,
+      "no-param-reassign": 0,
+      "camelcase": "off",
+      "arrow-parens": [
+        "warn",
+        "as-needed"
+      ],
+      "comma-dangle": [
+        "warn",
+        "never"
+      ],
+      "import/no-cycle": [
+        "off"
+      ],
+      "import/no-extraneous-dependencies": [
+        "off"
+      ],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "jsx-a11y/click-events-have-key-events": 0,
+      "jsx-a11y/no-onchange": "off",
+      "jsx-a11y/no-static-element-interactions": 0,
+      "max-len": [
+        "error",
+        120, 
+        { "ignoreTemplateLiterals": true }
+      ],
+      "newline-per-chained-call": "off",
+      "no-console": [
+        "warn",
+        {
+          "allow": [
+            "tron"
+          ]
+        }
+      ],
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id"
+          ],
+          "enforceInMethodNames": true
+        }
+      ],
+      "no-use-before-define": "off",
+      "quotes": [
+        "error",
+        "single"
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": {
+            "resolve": {
+              "extensions": [
+                ".js",
+                ".jsx",
+                ".ts",
+                ".tsx"
+              ]
+            }
+          }
+        }
+      },
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
